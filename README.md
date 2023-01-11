@@ -13,6 +13,8 @@ The 2022 version was based on the 2021 version, which started with the 2020 vers
 There was a prior 2015 version (in "non-modern" JavaScript) that was used from 2015-2018.
 There were even older versions in C++, beginning from 2000, with the last C++ version in 2014.
 
+Note that the [GitHub Repository](https://github.com/CS559/CS559-Framework23) is set up to deploy the documentation to [GitHub Pages](https://cs559.github.io/CS559-Framework23/). The documentation is automatically generated with JSDOC.
+
 For 2022, the big change is that we switch to [THREE.JS](https://threejs.org/) r137 which was the latest version with available typing information when we had to commit to a version in class. Unlike the 2021 version, the new version of THREE deprecated old-style `Geometry` objects, so we have to switch everything to `BufferGeometry`.
 
 The closest thing to a tutorial for the Framework code is the first workbook/assignment that uses it.
@@ -86,7 +88,7 @@ This library is provided under a 2-clause BSD open source license.
 
 From: https://opensource.org/licenses/BSD-2-Clause
 
-Copyright &copy; 2021 Michael Gleicher
+Copyright &copy; 2021,2023 Michael Gleicher
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
