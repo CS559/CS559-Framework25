@@ -125,7 +125,7 @@ export class GrObject {
 
     /** A flag for if this object is ridable - if so, it should be a specific THREE object to
      * parent the object to */
-    /** @type {THREE.Object3D} */
+    /** @type {THREE.Object3D | undefined } */
     this.rideable = undefined;
 
     /** the unique ID is a number (non-zero) that comes from the world - set by GrWorld.add*/
