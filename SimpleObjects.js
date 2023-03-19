@@ -76,7 +76,7 @@ export class GrSphere extends GrObject {
 
     const material = params.material ?? new T.MeshStandardMaterial({ color: params.color ?? '#FF8888' });
     const radius = (params.size / 2.0) || 1.0
-    const geometry = new T.SphereBufferGeometry(
+    const geometry = new T.SphereGeometry(
       radius,
       params.widthSegments ?? 8,
       params.heightSegments ?? 6
@@ -102,7 +102,7 @@ export class GrSphere extends GrObject {
    * @param {number} [heightSegments] - number of vertical segments
    */
   setSegmentation(widthSegments, heightSegments) {
-    this.mesh.geometry = new T.SphereBufferGeometry(this.mesh.geometry.parameters.radius, widthSegments, heightSegments);
+    this.mesh.geometry = new T.SphereGeometry(this.mesh.geometry.parameters.radius, widthSegments, heightSegments);
   }
 }
 
@@ -131,7 +131,7 @@ export class GrSquareSign extends GrObject {
       if (params.map) materialProps.map = params.map;
       const material = params.material ?? new T.MeshStandardMaterial(materialProps)
       const size = params.size ?? 0.5;
-      const geometry = new T.PlaneBufferGeometry(size*2, size*2);
+      const geometry = new T.PlaneGeometry(size*2, size*2);
       
   
       // note that we have to make the Object3D before we can call
@@ -226,7 +226,7 @@ export class GrTorusKnot extends GrObject {
    */
   constructor(params = {}, paramInfo = []) {
     const material = params.material ?? new T.MeshStandardMaterial({ color: params.color ?? '#FF8888' });
-    const geometry = new T.TorusKnotBufferGeometry();
+    const geometry = new T.TorusKnotGeometry();
 
     // note that we have to make the Object3D before we can call
     // super and we have to call super before we can use this
@@ -284,7 +284,7 @@ export class GrCylinder extends GrObject {
     constructor(params = {}, paramInfo = []) {
         const material = params.material ?? new T.MeshStandardMaterial({ color: params.color ?? '#FF8888' });
         const radius = params.radius ?? 1;
-        const geometry = new T.CylinderBufferGeometry(
+        const geometry = new T.CylinderGeometry(
           params.top ?? radius,
           params.bottom ?? radius,
           params.height ?? 1.0,
@@ -313,7 +313,7 @@ export class GrCone extends GrObject {
     constructor(params = {}, paramInfo = []) {
         const material = params.material ?? new T.MeshStandardMaterial({ color: params.color ?? '#FF8888' });
         const radius = params.radius ?? 1;
-        const geometry = new T.ConeBufferGeometry(
+        const geometry = new T.ConeGeometry(
           radius,
           params.height ?? 1.0,
           params.widthSegments ?? 8,
